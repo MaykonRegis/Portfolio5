@@ -1,0 +1,136 @@
+Diagrama de casos de uso
+
+Bom nesse diagrama de casos de uso começei procurando entender como funcionaria o 
+sistema zero dengue, oque foi proposto a ser desenvolvido, primeiro caso identificar 
+os atores do sistema eu identifiquei dois atores a pessoa e a equipe que vai receber a denuncia
+e monitorar os locais e tudo mais, também procurei definir os requisitos funcionais e nao funcionais
+e os requisitos do sistema, bom partindo desse ponto a pessoa solicita o cadastro aparecera uma tela
+para ela preencher com os dados dela depois ela irar receber uma mensagem de cadastro efetuado 
+com sucesso logo em seguida sera enviado um link para o email da solicitante para confirmação e so
+sera liberado o sistema quando ela clicar no link, que serve para confimação real da pessoa, depois 
+disso ela estara livre para realizar a sua denuncia, informando os dados da denuncia e posteriomente
+monitora aquele local. Na parte da equipe suas funçoes e receber a denuncia, validar a denuncia porque
+esses sistema podem o correr de engraçadinhos realizar cadastro fake e compromenter o sistema, dpeois
+a equipe ira ate o local, realizara a denuncia, e posteriomente aplica multas em casos de local publico
+for constatado pessoas jogando lixo, que causara na proliferação do musquito da dengue. 
+
+DIAGRAMA DE CLASSE 
+
+Já do diagrama de classe foi definido as classes principais
+o cadastro  o sistema zerodengue que sera a interface que a pessoa acessara depois
+de realizar o cadastro que por sequencia tera acesso a classe denuncia onde ela efetuara a
+denúncia que esta ligado a classe equipe que recebera essa deúncia  
+a classe pessoa só esta para mostrar seu
+relacionamento com o cadastro, foram definidos todos os atributos
+que o cadastro ira pedir e seus metodos, a classe sistema também foram 
+definidos seus atributos em função da ralização da denuncia
+do sistema apos o cadastro e seus metodos, a pessoa tambem poderar alterar
+seus dados, monitorar o local e realizar a denuncia, a classe equipe tem seus atributos, o 
+nome da equipe a regiao de atuação e identificação, ela também atráves de seus metodos, receber
+a denuncia, limpeza, monitorar os locais, aplicar multas. o objetivo desse diagrama e identificar
+as classes do sistema.  
+
+DIAGRAMA DE ATIVIDADE
+Nesse diagrama o foco dele e mostrar o passo a passo do sistema, no caso desse sistema
+seria mostrado o passo do cadastro pedido para dar acesso ao sistema, primeiro a pessoa 
+informa seus dados, o software vai validar alguns para ter certeza que e uma pessoa, depois o
+sistema vai seguindo os passos validando os dados, não todos mais alguns necessarios no final 
+tera uma opção de alterar dados ou cancelar ou seguir em frente para confirma seu cadastro
+logo em seguida ela sera redirecionada para a interface que la podera realizar a denúncia, novamente
+sera pedidos os dados da denuncia, local do foco, uma descrição, localização e endereço, e em seguida monitorar
+sua denuncia e local.
+
+DIAGRAMA DE ATIVIDADE EQUIPE
+Nesse segundo diagrama sera mostrado a participação da equipe que estara ligado ao sistema
+qual sua função, basicamente sera receber a denuncia a central ou a logistica por trais envia
+a equipe para realização da limpeza e monitoramento, sera receber a solicitação valida se são corretas
+as informações faz a  limpeza e depois monitorar para aplicar multas caso ocorra de pessoas estarem
+sujando o local novamente, porque trata de saúde publica todos devem fazer sua parte. 
+
+DIAGRAMA DE SEQUENCIA
+Este diagrama se baseia no diagrama de casos de uso, juntamente para exibir como 
+sera a interação dos atores com o sistema, mostrando os comandos(mensagens) que
+seram disparado ao solicitante solicitar o cadastro, retornando a ele a pagina
+e em seguida pede pra ele colocar seus dados valida esses dados se estiver tudo correto
+confirma seus dados, depois do cadastro efetuado sera direcionado a pagina para efetuar
+sua denúncia.
+
+DIAGRAMA DE SEQUENCIA EQUIPE
+No diagrama da equipe sera exibido sua função perante ao sistema,
+que são receber a denúncia, validar a denúncia e se locomover até o local
+para efetuar a limpeza ou aplicação de multa. 
+
+ARQUITETURA LOGICA E FISICA
+
+Arquitetura logica
+Nessa arquitetura logica tem como função mostrar como sera o funcionamento
+do banco em si, já com os chaves e tipos primitivos definidos, nessa parte foram 
+criados 3 tabelas que se relacionam com o sistema. Já a arquitetura fisica
+já e definido a parte do código em si, ou seja pronto para ser criado num SGBD
+escolhido no caso desse proejto foi escolhido o MySQL
+
+
+
+Tecnologias Utilizadas
+foram usadas na parte da web o PHO + HTML5 + CSS3, na parte do banco de dados
+foi escolhido o MySQL como SGBD, os softwares usados na parte da modelagen foram
+astah, brmodelo,
+
+
+
+Tarefa 2: Projeto Orientado à Objetos 
+
+2.1:Eu usaria nesse projeto a liguagem php por ser uma linguagem
+conhecida facil de entendimento ser orientada o objeto e permiti
+facil ligação com banco de dados que nesse projeto sera de importancia 
+utilização para receber os dados dos cadastrantes. Já o padrão utilizar
+seria o mvc
+ 
+
+
+2.2:Assim um Framework tem como principal objetivo resolver problemas 
+recorrentes com uma abordagem genérica, permitindo ao desenvolvedor 
+focar seus esforços na resolução do problema em si, e não ficar reescrevendo software(codigo).
+Ou seja os framework ajudam o desenvolvedor a projetar o sistema de forma mais
+eficiente tem uma curva de apredizagem relativamente facil, e a reutilização de codigos
+que geram menos esfoço dos programadores pelo fato de nao ter que inventar a roda 
+novamente vasta reutiliza, entao ele tem uma vasta importancia, Basicamente, é um template com diversas 
+funções que podem ser usadas pelo desenvolvedor. Com ele, é desnecessário gastar tempo 
+para reproduzir a mesma função em diferentes projetos.
+
+2.2.1:O Laravel oferece aos usuários 3 opções de painéis para administrar os projetos:
+ Horizon, Nova e Echo. Oferece um kit de ferramentas muito amplo e opções que 
+facilitam o trabalho em equipe, o que é particularmente desejável em projetos 
+com mais de um programador. A parte visual e estética também tem importância, 
+porém mais orientada ao quão fácil é a edição do conteúdo.
+
+2.2.2:Zend Framework
+O Zend é orientado a performance, sendo que a versão mais recente oferece um desempenho 
+até quatro vezes mais rápido que a anterior. Utiliza uma arquitetura aberta que tanto
+ pode ser baseada em Middleware ou MVC, seguindo os padrões PHP-FIG. 
+Também privilegia aspectos de segurança, como o armazenamento de senhas usando bcrypt 
+ou gera criptografia usando AES.
+
+3:Um padrão que poderia se encaixar seria o padrão abstract factory
+ele e um padrão de projeto criacional, que resolve o problema de criar familias
+de produtos sem especificar suas classes concretas.O Abstract Factory define uma interface para criar 
+todos os produtos distintos, mas deixa a criação real do produto para classes fábrica concretas. 
+Cada tipo de fábrica corresponde a uma determinada variedade de produtos. Portanto como e um 
+sistema de cadastro se encaixava bem com algumas alterações.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
